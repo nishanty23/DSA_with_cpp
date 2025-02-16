@@ -1,0 +1,35 @@
+/*
+Given a string s, return the longest 
+palindromic
+ 
+substring
+ in s
+*/
+
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        int start = 0, maxLen = 0;
+        
+        for (int i = 0; i < s.size(); i++) {
+            expandAroundCenter(s, i, i, start, maxLen);     // Odd length
+            expandAroundCenter(s, i, i + 1, start, maxLen); // Even length
+        }
+
+        return s.substr(start, maxLen);
+    }
+
+private:
+    void expandAroundCenter(string &s, int left, int right, int &start, int &maxLen) {
+        while (left >= 0 && right < s.size() && s[left] == s[right]) {
+            left--;
+            right++;
+        }
+        
+        int len = right - left - 1; // Length after expanding
+        if (len > maxLen) {
+            maxLen = len;
+            start = left + 1;
+        }
+    }
+};
