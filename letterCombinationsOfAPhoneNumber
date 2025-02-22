@@ -1,0 +1,53 @@
+/*
+Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
+
+Example 1:
+Input: digits = "23"
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+
+Example 2:
+Input: digits = ""
+Output: []
+
+Example 3:
+Input: digits = "2"
+Output: ["a","b","c"]
+*/
+
+#include <vector>
+#include <string>
+#include <unordered_map>
+
+using namespace std;
+
+class Solution {
+public:
+    vector<string> letterCombinations(string digits) {
+        if (digits.empty()) return {}; // Edge case: Empty input
+
+        unordered_map<char, string> phoneMap = {
+            {'2', "abc"}, {'3', "def"}, {'4', "ghi"}, {'5', "jkl"}, 
+            {'6', "mno"}, {'7', "pqrs"}, {'8', "tuv"}, {'9', "wxyz"}
+        };
+
+        vector<string> result;
+        string current;
+        backtrack(0, digits, phoneMap, current, result);
+        return result;
+    }
+
+private:
+    void backtrack(int index, const string &digits, unordered_map<char, string> &phoneMap, 
+                   string &current, vector<string> &result) {
+        if (index == digits.size()) {
+            result.push_back(current); // Base case: store valid combination
+            return;
+        }
+
+        for (char c : phoneMap[digits[index]]) { // Iterate through letters for current digit
+            current.push_back(c); // Choose letter
+            backtrack(index + 1, digits, phoneMap, current, result); // Recurse
+            current.pop_back(); // Undo choice (backtracking)
+        }
+    }
+};
