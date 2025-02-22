@@ -1,0 +1,58 @@
+/*
+Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
+
+0 <= a, b, c, d < n
+a, b, c, and d are distinct.
+nums[a] + nums[b] + nums[c] + nums[d] == target
+You may return the answer in any order.
+*/
+
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+class Solution {
+public:
+    vector<vector<int>> fourSum(vector<int>& nums, int target) {
+        vector<vector<int>> result;
+        int n = nums.size();
+        if (n < 4) return result; // Edge case: If less than 4 elements, no quadruplets possible
+
+        sort(nums.begin(), nums.end()); // Step 1: Sort the array
+
+        for (int a = 0; a < n - 3; a++) {
+            if (a > 0 && nums[a] == nums[a - 1]) continue; // Skip duplicate `a`
+            
+            for (int b = a + 1; b < n - 2; b++) {
+                if (b > a + 1 && nums[b] == nums[b - 1]) continue; // Skip duplicate `b`
+
+                int left = b + 1, right = n - 1;
+                long long targetSum = (long long)target - nums[a] - nums[b];
+
+                while (left < right) {
+                    int sum = nums[left] + nums[right];
+
+                    if (sum == targetSum) {
+                        result.push_back({nums[a], nums[b], nums[left], nums[right]});
+                        
+                        // Skip duplicate `left` values
+                        while (left < right && nums[left] == nums[left + 1]) left++;
+                        // Skip duplicate `right` values
+                        while (left < right && nums[right] == nums[right - 1]) right--;
+
+                        left++, right--; // Move pointers after finding valid quadruplet
+                    } 
+                    else if (sum < targetSum) {
+                        left++; // Increase sum
+                    } 
+                    else {
+                        right--; // Decrease sum
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+};
