@@ -1,0 +1,42 @@
+/*
+Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+
+Each row must contain the digits 1-9 without repetition.
+Each column must contain the digits 1-9 without repetition.
+Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+Note:
+
+A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+Only the filled cells need to be validated according to the mentioned rules.
+*/
+
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+
+using namespace std;
+
+class Solution {
+public:
+    bool isValidSudoku(vector<vector<char>>& board) {
+        unordered_set<char> rowSets[9], colSets[9], boxSets[9];
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                char num = board[i][j];
+                if (num == '.') continue; // Skip empty cells
+
+                int boxIndex = (i / 3) * 3 + (j / 3); // Calculate sub-box index
+
+                if (rowSets[i].count(num) || colSets[j].count(num) || boxSets[boxIndex].count(num)) {
+                    return false; // Duplicate found
+                }
+
+                rowSets[i].insert(num);
+                colSets[j].insert(num);
+                boxSets[boxIndex].insert(num);
+            }
+        }
+        return true;
+    }
+};
