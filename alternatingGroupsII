@@ -1,0 +1,57 @@
+/*
+There is a circle of red and blue tiles. You are given an array of integers colors and an integer k. The color of tile i is represented by colors[i]:
+
+colors[i] == 0 means that tile i is red.
+colors[i] == 1 means that tile i is blue.
+An alternating group is every k contiguous tiles in the circle with alternating colors (each tile in the group except the first and last one has a different color from its left and right tiles).
+
+Return the number of alternating groups.
+
+Note that since colors represents a circle, the first and the last tiles are considered to be next to each other.
+*/
+
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    int numberOfAlternatingGroups(vector<int>& colors, int k) {
+        int n = colors.size();
+        if (k > n) return 0;
+
+        // Extend the array to handle circular nature
+        vector<int> extended(colors.begin(), colors.end());
+        extended.insert(extended.end(), colors.begin(), colors.end());
+
+        int count = 0;
+        int validCount = 1; // Since a single element is trivially alternating
+
+        // Initialize the first k-window
+        for (int i = 1; i < k; i++) {
+            if (extended[i] != extended[i - 1]) {
+                validCount++;
+            }
+        }
+
+        // If the first k-length window is alternating, count it
+        if (validCount == k) count++;
+
+        // Slide the window across the array
+        for (int start = 1; start < n; start++) {
+            // Remove the effect of the outgoing element
+            if (extended[start] != extended[start - 1]) {
+                validCount--;
+            }
+
+            // Add the effect of the incoming element
+            if (extended[start + k - 1] != extended[start + k - 2]) {
+                validCount++;
+            }
+
+            // If validCount == k, it means the window is fully alternating
+            if (validCount == k) count++;
+        }
+
+        return count;
+    }
+};
