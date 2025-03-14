@@ -1,0 +1,27 @@
+/*
+Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
+*/
+
+class Solution {
+public:
+    double myPow(double x, int n) {
+        if (n == 0) return 1;  // Base case: x^0 = 1
+        
+        long long N = n;  // Use long long to handle edge case n = INT_MIN
+        if (N < 0) {
+            x = 1 / x;
+            N = -N;
+        }
+
+        double result = 1.0;
+        while (N > 0) {
+            if (N % 2 == 1) {  // If n is odd, multiply result with x
+                result *= x;
+            }
+            x *= x;  // Square the base
+            N /= 2;  // Reduce exponent by half
+        }
+
+        return result;
+    }
+};
