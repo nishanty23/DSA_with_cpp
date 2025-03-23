@@ -1,0 +1,56 @@
+/*
+You are in a city that consists of n intersections numbered from 0 to n - 1 with bi-directional roads between some intersections. The inputs are generated such that you can reach any intersection from any other intersection and that there is at most one road between any two intersections.
+
+You are given an integer n and a 2D integer array roads where roads[i] = [ui, vi, timei] means that there is a road between intersections ui and vi that takes timei minutes to travel. You want to know in how many ways you can travel from intersection 0 to intersection n - 1 in the shortest amount of time.
+
+Return the number of ways you can arrive at your destination in the shortest amount of time. Since the answer may be large, return it modulo 109 + 7.
+*/
+
+class Solution {
+ public:
+  int countPaths(int n, vector<vector<int>>& roads) {
+    vector<vector<pair<int, int>>> graph(n);
+
+    for (const vector<int>& road : roads) {
+      const int u = road[0];
+      const int v = road[1];
+      const int w = road[2];
+      graph[u].emplace_back(v, w);
+      graph[v].emplace_back(u, w);
+    }
+
+    return dijkstra(graph, 0, n - 1);
+  }
+
+ private:
+  // Similar to 1786. Number of Restricted Paths From First to Last Node
+  int dijkstra(const vector<vector<pair<int, int>>>& graph, int src, int dst) {
+    constexpr int kMod = 1'000'000'007;
+    vector<long> ways(graph.size());
+    vector<long> dist(graph.size(), LONG_MAX);
+
+    ways[src] = 1;
+    dist[src] = 0;
+    using P = pair<long, int>;  // (d, u)
+    priority_queue<P, vector<P>, greater<>> minHeap;
+    minHeap.emplace(dist[src], src);
+
+    while (!minHeap.empty()) {
+      const auto [d, u] = minHeap.top();
+      minHeap.pop();
+      if (d > dist[u])
+        continue;
+      for (const auto& [v, w] : graph[u])
+        if (d + w < dist[v]) {
+          dist[v] = d + w;
+          ways[v] = ways[u];
+          minHeap.emplace(dist[v], v);
+        } else if (d + w == dist[v]) {
+          ways[v] += ways[u];
+          ways[v] %= kMod;
+        }
+    }
+
+    return ways[dst];
+  }
+};
