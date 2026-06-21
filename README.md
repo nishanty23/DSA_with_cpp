@@ -1,140 +1,387 @@
+<div align="center">
+
+
+
 # 🚀 LeetCode Solutions in C++
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Language-C%2B%2B-blue?style=for-the-badge&logo=cplusplus">
-  <img src="https://img.shields.io/badge/Platform-LeetCode-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Focus-Data%20Structures%20%26%20Algorithms-green?style=for-the-badge">
+
+
+<p>
+
+  <img src="https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white">
+
+  <img src="https://img.shields.io/badge/Platform-LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white">
+
+  <img src="https://img.shields.io/badge/DSA-Practice-success?style=for-the-badge">
+
 </p>
 
-## 📖 About This Repository
 
-This repository contains my solutions to LeetCode problems implemented in **C++**. It represents my continuous journey of mastering **Data Structures and Algorithms**, strengthening problem-solving abilities, and developing the analytical mindset required for Software Development roles.
 
-Every solution in this repository is written with a focus on:
+<p>
 
-* ✅ Correctness and optimality
-* ✅ Clean and readable code
-* ✅ Time and space complexity analysis
-* ✅ Industry-standard problem-solving approaches
-* ✅ Continuous improvement through practice
+  <img src="https://img.shields.io/badge/Problems%20Solved-150%2B-brightgreen?style=for-the-badge">
 
-The purpose of this repository extends beyond solving coding problems. It serves as documented evidence of my commitment to writing efficient code, understanding algorithmic concepts, and applying logical thinking to real-world software challenges.
+  <img src="https://img.shields.io/badge/Focus-Problem%20Solving-blueviolet?style=for-the-badge">
+
+</p>
+
+
+
+<h3>Building strong software engineering fundamentals through consistent problem solving.</h3>
+
+
+
+</div>
+
+
+
+---
+
+
+
+## 📖 About
+
+
+
+This repository contains my solutions to **LeetCode problems implemented in C++**. It represents my continuous journey toward mastering **Data Structures and Algorithms**, improving analytical thinking, and developing the problem-solving skills required for Software Development roles.
+
+
 
 ---
 
-## 🎯 Why This Repository?
 
-Software engineers solve problems before they write code.
 
-Through consistent problem solving, this repository demonstrates my ability to:
+## 🎯 Repository Goals
 
-* Analyze complex problems.
-* Choose appropriate data structures.
-* Design efficient algorithms.
-* Optimize solutions for performance.
-* Write maintainable C++ code.
-* Learn and apply new concepts independently.
 
-These are the same skills required to build scalable and reliable software systems.
+
+<table>
+
+<tr>
+
+<td>✅ Write clean and readable code</td>
+
+<td>✅ Optimize time and space complexity</td>
+
+</tr>
+
+<tr>
+
+<td>✅ Strengthen DSA concepts</td>
+
+<td>✅ Improve analytical thinking</td>
+
+</tr>
+
+<tr>
+
+<td>✅ Follow industry-standard approaches</td>
+
+<td>✅ Build consistency through practice</td>
+
+</tr>
+
+</table>
+
+
 
 ---
+
+
 
 ## 🧠 Topics Covered
 
-* Arrays
-* Strings
-* Linked Lists
-* Stacks & Queues
-* Hashing
-* Recursion & Backtracking
-* Binary Search
-* Sliding Window
-* Trees & Binary Trees
-* Binary Search Trees
-* Heaps & Priority Queues
-* Graph Algorithms
-* Dynamic Programming
-* Greedy Algorithms
-* Tries
-* Bit Manipulation
-* Two Pointers
-* Sorting Algorithms
-* Mathematical Problems
+
+
+<p align="center">
+
+
+
+`Arrays`
+
+`Strings`
+
+`Linked Lists`
+
+`Stacks`
+
+`Queues`
+
+`Hashing`
+
+`Recursion`
+
+`Backtracking`
+
+`Binary Search`
+
+
+
+`Sliding Window`
+
+`Trees`
+
+`BST`
+
+`Heaps`
+
+`Graphs`
+
+`Dynamic Programming`
+
+
+
+`Greedy`
+
+`Tries`
+
+`Bit Manipulation`
+
+`Two Pointers`
+
+`Sorting`
+
+
+
+</p>
+
+
 
 ---
 
-## 📈 Problem-Solving Approach
 
-For each problem, I focus on:
 
-1. Understanding the problem constraints.
-2. Identifying brute-force solutions.
-3. Optimizing the approach.
-4. Analyzing time and space complexity.
-5. Writing clean and efficient C++ code.
+## 📈 Problem Solving Workflow
 
-This approach reflects how real-world software engineering problems are solved.
+
+
+```text
+
+Understand Problem
+
+        ↓
+
+Analyze Constraints
+
+        ↓
+
+Brute Force Approach
+
+        ↓
+
+Optimize Solution
+
+        ↓
+
+Complexity Analysis
+
+        ↓
+
+Clean C++ Implementation
+
+```
+
+
+
+---
+
+
+
+## 💻 Tech Stack
+
+
+
+<table>
+
+<tr>
+
+<td><strong>Language</strong></td>
+
+<td>C++</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Platform</strong></td>
+
+<td>LeetCode</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Editor</strong></td>
+
+<td>VS Code</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Version Control</strong></td>
+
+<td>Git & GitHub</td>
+
+</tr>
+
+</table>
+
+
 
 ---
 
-## 💻 Technologies Used
 
-* **Language:** C++
-* **IDE:** VS Code
-* **Platform:** LeetCode
-* **Version Control:** Git & GitHub
 
----
+## 📊 What This Repository Demonstrates
 
-## 📚 What This Repository Demonstrates
 
-This repository highlights:
 
-✔ Strong understanding of Data Structures and Algorithms
-✔ Consistent problem-solving ability
-✔ Optimization mindset
-✔ Clean coding practices
-✔ Ability to learn independently
-✔ Commitment to continuous improvement
+* Strong understanding of Data Structures and Algorithms
 
-It reflects the discipline, persistence, and technical foundation required for Software Development roles.
+* Consistent problem-solving ability
+
+* Optimization mindset
+
+* Clean coding practices
+
+* Independent learning capability
+
+* Commitment to continuous improvement
+
+
 
 ---
+
+
 
 ## 👨‍💻 About Me
 
-I am a Computer Science Engineering graduate passionate about:
+
+
+Computer Science Engineering graduate passionate about:
+
+
 
 * Software Development
-* Data Structures & Algorithms
-* Problem Solving
-* Android Development
-* Full-Stack Development
 
-I believe that strong fundamentals form the backbone of great software engineering, and this repository represents my ongoing effort to continuously improve those fundamentals.
+* Data Structures & Algorithms
+
+* Android Development
+
+* Full Stack Development
+
+* Problem Solving
+
+
+
+I believe strong fundamentals create great software, and this repository reflects my dedication to continuous learning.
+
+
 
 ---
+
+
 
 ## 🚀 For Recruiters
 
-This repository demonstrates:
 
-* Consistent coding practice.
-* Strong analytical thinking.
-* Understanding of algorithmic problem solving.
-* Ability to write efficient and maintainable code.
-* Dedication to continuous learning.
 
-I am eager to contribute these skills to real-world software products and engineering teams.
+This repository showcases:
+
+
+
+✔ Analytical thinking
+
+
+
+✔ Algorithmic problem solving
+
+
+
+✔ Clean and maintainable code
+
+
+
+✔ Consistent coding practice
+
+
+
+✔ Engineering discipline and persistence
+
+
 
 ---
 
-## ⭐ Support
 
-If you find this repository useful, consider giving it a **Star ⭐**.
 
-Your support motivates continuous learning and improvement.
+## 🔗 Connect With Me
+
+
+
+<p align="center">
+
+  <a href="YOUR_LEETCODE_LINK">
+
+    <img src="https://img.shields.io/badge/LeetCode-Profile-orange?style=for-the-badge&logo=leetcode">
+
+  </a>
+
+
+
+  <a href="YOUR_LINKEDIN_LINK">
+
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin">
+
+  </a>
+
+
+
+  <a href="YOUR_GITHUB_LINK">
+
+    <img src="https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github">
+
+  </a>
+
+</p>
+
+
 
 ---
 
-### "Great software is built on strong fundamentals, and strong fundamentals are built through consistent practice."
+
+
+## 📬 Open To Opportunities
+
+
+
+* Software Development Engineer (SDE)
+
+* Full Stack Developer
+
+* Android Developer
+
+
+
+Feel free to connect for discussions related to software engineering, problem solving, or career opportunities.
+
+
+
+---
+
+
+
+<div align="center">
+
+
+
+### ⭐ If you find this repository useful, consider giving it a star.
+
+
+
+*"Great software is built on strong fundamentals, and strong fundamentals are built through consistent practice."*
+
+
+
+</div>
