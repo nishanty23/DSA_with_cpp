@@ -321,31 +321,18 @@ This repository showcases:
 
 
 <p align="center">
-
-  <a href="YOUR_LEETCODE_LINK">
-
-    <img src="https://img.shields.io/badge/LeetCode-Profile-orange?style=for-the-badge&logo=leetcode">
-
+  <a href="https://leetcode.com/u/Nishant23082004/">
+    <img src="https://img.shields.io/badge/LeetCode-Profile-orange?style=for-the-badge&logo=leetcode&logoColor=white">
   </a>
 
-
-
-  <a href="YOUR_LINKEDIN_LINK">
-
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin">
-
+  <a href="https://www.linkedin.com/in/nishant-yadav-/">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
   </a>
 
-
-
-  <a href="YOUR_GITHUB_LINK">
-
-    <img src="https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github">
-
+  <a href="https://github.com/nishanty23">
+    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white">
   </a>
-
 </p>
-
 
 
 ---
