@@ -1,0 +1,22 @@
+// Time complexity: O(n)
+// Space complexity: O(1)
+
+class Solution {
+public:
+    int maxAbsoluteSum(vector<int>& nums) {
+        int n = nums.size();
+        int currSubSum = nums[0];
+        int maxSubSum = nums[0];
+        int currSubSum2 = nums[0];
+        int minSubSum = nums[0];
+        for(int i=1; i<n; i++){
+            currSubSum = max((nums[i]), (currSubSum + nums[i]));
+            maxSubSum = max((maxSubSum), (currSubSum));
+
+            currSubSum2 = min((nums[i]), (currSubSum2 + nums[i]));
+            minSubSum = min((minSubSum), (currSubSum2));
+        }
+        int result = max(maxSubSum, abs(minSubSum));
+        return result;
+    }
+};
